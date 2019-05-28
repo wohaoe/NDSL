@@ -41,5 +41,5 @@ int Condition::unlock(){
 
 int myfun()
 {
-  
+  int a;
 }
