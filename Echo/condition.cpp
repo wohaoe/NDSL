@@ -38,3 +38,8 @@ int Condition::lock(){
 int Condition::unlock(){
   return pthread_mutex_unlock(&m_mutex);
 }
+
+int myfun()
+{
+  
+}
