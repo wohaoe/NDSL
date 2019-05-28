@@ -1,0 +1,54 @@
+Allocator.cpp:141:1: error: prototype for ‘Block::Block(SuperBlock*, size_t, size_t)’ does not match any in class ‘Block’
+ Block::Block(SuperBlock* _superBlock, size_t _sizeOfData, size_t _alignedSize)
+ ^
+In file included from Allocator.cpp:3:0:
+Block.h:9:8: error: candidates are: constexpr Block::Block(Block&&)
+ struct Block
+        ^
+Block.h:9:8: error:                 constexpr Block::Block(const Block&)
+Block.h:20:5: error:                 Block::Block(SuperBlock, size_t, size_t)
+     Block(SuperBlock _superblock, size_t _sizeOfData, size_t _alignedSize);
+     ^
+Allocator.cpp: In constructor ‘SuperBlock::SuperBlock(size_t, size_t)’:
+Allocator.cpp:157:9: error: class ‘SuperBlock’ does not have any field named ‘offsetOfFirstBlock’
+         offsetOfFirstBlock((size_t) (void*) ((char*) this + sizeof(SuperBlock) + sizeof(Block*) * maxCountOfBlocks)),
+         ^
+Allocator.cpp:149:1: error: uninitialized const member in ‘const size_t {aka const long unsigned int}’ [-fpermissive]
+ SuperBlock::SuperBlock(size_t _sizePerBlock, size_t _sizeClass) 
+ ^
+In file included from Allocator.cpp:4:0:
+SuperBlock.h:16:18: note: ‘const size_t SuperBlock::offsetOfFirstIndex’ should be initialized
+     const size_t offsetOfFirstIndex;
+                  ^
+Allocator.cpp: In member function ‘void Block::freeBlock()’:
+Allocator.cpp:180:18: error: ‘superBlock’ was not declared in this scope
+     abortIfFalse(superBlock->magicBytes == MAGIC_BYTES_FOR_SUPERBLOCK,
+                  ^
+Allocator.cpp: In member function ‘Block* SuperBlock::allocateBlock(size_t, size_t)’:
+Allocator.cpp:210:35: error: ‘offsetOfFirstBlock’ was not declared in this scope
+         result = (Block*)((char*) offsetOfFirstBlock + nextOffsetIndex * (sizeof(Block) + maxSizeOfDataPerBlock));
+                                   ^
+Allocator.cpp:221:33: error: ‘_sizeofData’ was not declared in this scope
+         new(result) Block(this, _sizeofData, _size);
+                                 ^
+Allocator.cpp: In member function ‘Block* Heap::allocateBlock(size_t, size_t)’:
+Allocator.cpp:286:44: error: ‘size’ was not declared in this scope
+         Block* result = cur->allocateBlock(size, sizeOfData);
+                                            ^
+Allocator.cpp:286:50: error: ‘sizeOfData’ was not declared in this scope
+         Block* result = cur->allocateBlock(size, sizeOfData);
+                                                  ^
+Allocator.cpp: In function ‘void* poolMalloc(size_t, size_t)’:
+Allocator.cpp:340:62: error: ‘struct Block’ has no member named ‘superBlock’
+                     SuperBlock* superBlock = allocatedBlock->superBlock;
+                                                              ^
+Allocator.cpp: In function ‘void poolFree(void*)’:
+Allocator.cpp:375:41: error: ‘struct Block’ has no member named ‘superBlock’
+         SuperBlock* superBlock = block->superBlock;
+                                         ^
+Allocator.cpp:378:29: error: ‘struct Block’ has no member named ‘superBlock’
+         Heap* heap = block->superBlock->heap;
+                             ^
+Allocator.cpp:412:36: error: ‘struct SingleBlock’ has no member named ‘linkToThis’
+         singleBlock = singleBlock->linkToThis;
+                                    ^

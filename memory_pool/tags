@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CHUNK_H_	Chunk.h	2;"	d
+CStudent	test.cpp	/^}CStudent;$/;"	t	typeref:struct:student_st	file:
+Chunk	Chunk.h	/^        Chunk() : firstChunkOfFreeList(0)$/;"	f	class:chunk::Chunk
+Chunk	Chunk.h	/^    class Chunk$/;"	c	namespace:chunk
+MATH1_H_	Math1.h	2;"	d
+POOL_H_	Pool.h	2;"	d
+Pool	Pool.h	/^        explicit Pool(const size_type nrequestd_size, const size_type nnext_size = 32, const size_type nmax_size = 0)$/;"	f	class:dushuang::Pool
+Pool	Pool.h	/^    class Pool : public chunk::Chunk<>$/;"	c	namespace:dushuang
+RAWMEMORYBLOCK_H_	RawMemoryBlock.h	2;"	d
+RawMemoryBlock	RawMemoryBlock.h	/^        RawMemoryBlock() : ptr(0), blockSize(0)$/;"	f	class:raw::RawMemoryBlock
+RawMemoryBlock	RawMemoryBlock.h	/^        RawMemoryBlock(char *const nptr, const size_type nsize) : ptr(nptr), blockSize(nsize)$/;"	f	class:raw::RawMemoryBlock
+RawMemoryBlock	RawMemoryBlock.h	/^    class RawMemoryBlock$/;"	c	namespace:raw
+STANDARDFORMS_H_	StandardForms.h	2;"	d
+add_block	Chunk.h	/^        void add_block(void * const block1, const size_type blockSize1, const size_type partitionSize1)$/;"	f	class:chunk::Chunk
+age	test.cpp	/^   int age;$/;"	m	struct:student_st	file:
+alloc_size	Pool.h	/^        size_type alloc_size() const$/;"	f	class:dushuang::Pool
+beginPtr	RawMemoryBlock.h	/^        char * &beginPtr()  \/\/为了不创建副本$/;"	f	class:raw::RawMemoryBlock
+beginPtr	RawMemoryBlock.h	/^        char * beginPtr() const$/;"	f	class:raw::RawMemoryBlock
+blockSize	RawMemoryBlock.h	/^        size_type blockSize;$/;"	m	class:raw::RawMemoryBlock
+block_data_size	RawMemoryBlock.h	/^        size_type block_data_size() const$/;"	f	class:raw::RawMemoryBlock
+chunk	Chunk.h	/^namespace chunk$/;"	n
+default_user_allocator_malloc_free	StandardForms.h	/^    struct default_user_allocator_malloc_free$/;"	s	namespace:standard
+default_user_allocator_new_delete	StandardForms.h	/^    struct default_user_allocator_new_delete$/;"	s	namespace:standard
+divadeBlock	Chunk.cpp	/^void *chunk::Chunk<SizeType>::divadeBlock(void *block, size_type blockSize, const size_type partitionSize, void *end)$/;"	f	class:chunk::Chunk
+dushuang	Pool.h	/^namespace dushuang$/;"	n
+endPtr	RawMemoryBlock.h	/^        char *endPtr() const$/;"	f	class:raw::RawMemoryBlock
+find_block	Pool.cpp	/^dushuang::Pool<UserAllocator>::find_block(void * const chunkPS) const$/;"	f	class:dushuang::Pool
+find_prev	Chunk.cpp	/^void * chunk::Chunk<SizeType>::find_prev(void * const ptr)$/;"	f	class:chunk::Chunk
+firstChunkOfFreeList	Chunk.h	/^        void *firstChunkOfFreeList;$/;"	m	class:chunk::Chunk
+free	Pool.h	/^        void free(void * const chunk1)$/;"	f	class:dushuang::Pool
+free	Pool.h	/^        void free(void * const chunks, const size_type n)$/;"	f	class:dushuang::Pool
+free	StandardForms.h	/^        static void free(char *const block)$/;"	f	struct:standard::default_user_allocator_malloc_free
+freeChunk	Chunk.h	/^        void * freeChunk(void * const chunk1)$/;"	f	class:chunk::Chunk
+free_n	Chunk.h	/^        void free_n(void * const chunks, const size_type n, const size_type partition_size)$/;"	f	class:chunk::Chunk
+getGcd	Math1.h	/^    std::size_t getGcd(std::size_t a, std::size_t b)$/;"	f	namespace:math1
+getLcm	Math1.h	/^    std::size_t getLcm(std::size_t value1, std::size_t value2)$/;"	f	namespace:math1
+get_max_size	Pool.h	/^        size_type get_max_size() const$/;"	f	class:dushuang::Pool
+get_next_size	Pool.h	/^        size_type get_next_size() const$/;"	f	class:dushuang::Pool
+get_requested_size	Pool.h	/^        size_type get_requested_size() const$/;"	f	class:dushuang::Pool
+get_start_size	Pool.h	/^        size_type get_start_size() const$/;"	f	class:dushuang::Pool
+invaildate	RawMemoryBlock.h	/^        void invaildate()$/;"	f	class:raw::RawMemoryBlock
+isEmpty	Chunk.h	/^        bool isEmpty() const$/;"	f	class:chunk::Chunk
+is_from	Pool.h	/^        bool is_from(void * const chunk) const$/;"	f	class:dushuang::Pool
+is_from	Pool.h	/^        static bool is_from(void *const chunkPS, char *const i, const size_type sizeof_i)$/;"	f	class:dushuang::Pool
+list	Pool.h	/^        raw::RawMemoryBlock<size_type> list;$/;"	m	class:dushuang::Pool
+main	test.cpp	/^int main()$/;"	f
+malloc	Pool.h	/^        void *malloc()$/;"	f	class:dushuang::Pool
+malloc	StandardForms.h	/^        static char * malloc(const size_type bytes)$/;"	f	struct:standard::default_user_allocator_malloc_free
+mallocChunk	Chunk.h	/^        void * mallocChunk()$/;"	f	class:chunk::Chunk
+malloc_n	Chunk.cpp	/^void * chunk::Chunk<SizeType>::malloc_n(size_type n, size_type partition_size)$/;"	f	class:chunk::Chunk
+malloc_need_resize	Pool.cpp	/^void * dushuang::Pool<UserAllocator>::malloc_need_resize()$/;"	f	class:dushuang::Pool
+math1	Math1.h	/^namespace math1$/;"	n
+max_size	Pool.h	/^        size_type max_size;$/;"	m	class:dushuang::Pool
+min_align	Pool.h	/^        const size_t min_align = (size_t)(alignof(size_type));$/;"	m	class:dushuang::Pool
+min_alloc_size	Pool.h	/^        const size_t min_alloc_size = (size_t)math1::getLcm(sizeof(void *), sizeof(size_type));$/;"	m	class:dushuang::Pool
+name	test.cpp	/^   char name[10];$/;"	m	struct:student_st	file:
+next	RawMemoryBlock.h	/^        RawMemoryBlock next() const$/;"	f	class:raw::RawMemoryBlock
+nextPtrOfAddressReference	Chunk.h	/^        static void * & nextPtrOfAddressReference(void * const ptr)$/;"	f	class:chunk::Chunk
+next_size	Pool.h	/^        size_type next_size;$/;"	m	class:dushuang::Pool
+nextblock_point	RawMemoryBlock.h	/^        char *&nextblock_point() const$/;"	f	class:raw::RawMemoryBlock
+nextblock_size	RawMemoryBlock.h	/^        size_type &nextblock_size() const$/;"	f	class:raw::RawMemoryBlock
+operator delete	StandardForms.h	/^        static void operator delete(void *pMemory) throw() $/;"	f	struct:standard::default_user_allocator_new_delete
+operator delete	StandardForms.h	/^        static void operator delete(void *pMemory, const std::nothrow_t &) throw()$/;"	f	struct:standard::default_user_allocator_new_delete
+operator delete	StandardForms.h	/^        static void operator delete(void *pMemory, void *ptr) throw()$/;"	f	struct:standard::default_user_allocator_new_delete
+operator new	StandardForms.h	/^        static void *operator new(std::size_t size) throw(std::bad_alloc)$/;"	f	struct:standard::default_user_allocator_new_delete
+operator new	StandardForms.h	/^        static void *operator new(std::size_t size, const std::nothrow_t &nt) throw()$/;"	f	struct:standard::default_user_allocator_new_delete
+operator new	StandardForms.h	/^        static void *operator new(std::size_t size, void *ptr) throw()$/;"	f	struct:standard::default_user_allocator_new_delete
+ptr	RawMemoryBlock.h	/^        char *ptr;  \/\/block起始指针$/;"	m	class:raw::RawMemoryBlock
+ptr_nextblock_point	RawMemoryBlock.h	/^        char *ptr_nextblock_point()$/;"	f	class:raw::RawMemoryBlock
+ptr_nextblock_size	RawMemoryBlock.h	/^        char *ptr_nextblock_size()$/;"	f	class:raw::RawMemoryBlock
+purge_memory	Pool.cpp	/^bool dushuang::Pool<UserAllocator>::purge_memory()$/;"	f	class:dushuang::Pool
+raw	RawMemoryBlock.h	/^namespace raw$/;"	n
+release_memory	Pool.cpp	/^bool dushuang::Pool<UserAllocator>::release_memory()$/;"	f	class:dushuang::Pool
+requestd_size	Pool.h	/^        const size_type requestd_size;$/;"	m	class:dushuang::Pool
+setNextBlock	RawMemoryBlock.h	/^        void setNextBlock(const RawMemoryBlock &arg) const$/;"	f	class:raw::RawMemoryBlock
+set_max_size	Pool.h	/^        void set_max_size(const size_type nmax_size)$/;"	f	class:dushuang::Pool
+set_next_size	Pool.h	/^        void set_next_size(size_type nnext_size)$/;"	f	class:dushuang::Pool
+set_start_size	Pool.h	/^        void set_start_size(const size_type nstart_size)$/;"	f	class:dushuang::Pool
+size_type	Chunk.h	/^        typedef SizeType size_type;$/;"	t	class:chunk::Chunk
+size_type	Pool.h	/^        typedef typename user_alloctor::size_type size_type;$/;"	t	class:dushuang::Pool
+size_type	RawMemoryBlock.h	/^        typedef SizeType size_type; $/;"	t	class:raw::RawMemoryBlock
+size_type	StandardForms.h	/^        typedef std::size_t size_type;$/;"	t	struct:standard::default_user_allocator_malloc_free
+size_type	StandardForms.h	/^        typedef std::size_t size_type;$/;"	t	struct:standard::default_user_allocator_new_delete
+standard	StandardForms.h	/^namespace standard$/;"	n
+start_size	Pool.h	/^        size_type start_size;$/;"	m	class:dushuang::Pool
+store	Pool.h	/^        chunk::Chunk<size_type> & store()$/;"	f	class:dushuang::Pool
+student_st	test.cpp	/^typedef struct student_st$/;"	s	file:
+total_size	RawMemoryBlock.h	/^        size_type total_size() const$/;"	f	class:raw::RawMemoryBlock
+try_malloc_n	Chunk.cpp	/^void * chunk::Chunk<SizeType>::try_malloc_n(void * & start, size_type n, const size_type partition_size)$/;"	f	class:chunk::Chunk
+user_alloctor	Pool.h	/^        typedef UserAllocator user_alloctor;$/;"	t	class:dushuang::Pool
+vaild	RawMemoryBlock.h	/^        bool vaild() const$/;"	f	class:raw::RawMemoryBlock
+~Pool	Pool.cpp	/^dushuang::Pool<UserAllocator>::~Pool()$/;"	f	class:dushuang::Pool
