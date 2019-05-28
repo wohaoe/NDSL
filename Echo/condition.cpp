@@ -42,4 +42,6 @@ int Condition::unlock(){
 int myfun()
 {
   int a;
+  int b;
+  int c;
 }
